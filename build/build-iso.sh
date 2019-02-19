@@ -96,9 +96,9 @@ sudo find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | s
 
 # Geração da imagem de instalação
 
-sudo cp -v ../../../boot-files/*.cfg boot/grub
+sudo cp -v ../../boot-files/*.cfg boot/grub
 sudo rm -rfv isolinux
-sudo cp -rfv ../../../boot-files/isolinux .
+sudo cp -rfv ../../boot-files/isolinux .
 sudo cp ../edit/boot/initrd.img-*-generic casper/initrd
 sudo cp ../edit/boot/vmlinuz-*-generic casper/vmlinuz
 sudo apt install -y isolinux xorriso
