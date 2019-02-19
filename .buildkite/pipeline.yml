@@ -7,5 +7,3 @@ steps:
   - label: ':rocket: Release da ISO'
     commands: 
       - 'wget -O- https://storage.radix.ws/upload-iso.sh | bash'
-      - 'sudo umount ~/Público/radix-core/livecdtmp/mnt'
-      - 'sudo rm -rf ~/Público/radix-core/livecdtmp'
