@@ -1,16 +1,16 @@
 # Preparação de arquivos e pastas
 
-mkdir -p ~/Público/radix-core
-cd ~/Público/radix-core
-rm -rfv radix
-git clone https://bitbucket.org/rauldipeas/radix
-sudo umount livecdtmp/mnt
-sudo rm -rf livecdtmp
+#mkdir -p ~/Público/radix-core
+#cd ~/Público/radix-core
+#rm -rfv radix
+#git clone https://bitbucket.org/rauldipeas/radix
+#sudo umount livecdtmp/mnt
+#sudo rm -rf livecdtmp
 mkdir -pv livecdtmp
 wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 cp -v xubuntu*.iso livecdtmp
-rm -rfv simplechroot
-wget https://gitlab.com/BobyMCbobs/simplechroot/raw/1.1.0/simplechroot;chmod +x -v simplechroot
+#rm -rfv simplechroot
+#wget https://gitlab.com/BobyMCbobs/simplechroot/raw/1.1.0/simplechroot;chmod +x -v simplechroot
 cd livecdtmp
 mkdir -pv mnt
 sudo mount -o loop xubuntu*.iso mnt
@@ -43,12 +43,12 @@ sudo chroot edit apt install -y build-essential curl git ruby-dev
 # Execução do script de criação do sistema
 
 sudo chroot edit git clone https://bitbucket.org/rauldipeas/radix
-sudo chroot edit find radix/core-repo -type f -exec dpkg -i {} \;
+sudo chroot edit find ../core-repo -type f -exec dpkg -i {} \;
 sudo chroot edit apt install -f -y
-sudo chroot edit cp -rfv radix/skel /etc
-sudo chroot edit sh -c "cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/"
-sudo chroot edit cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
-sudo chroot edit bash radix/build/build-radix-core.sh
+sudo chroot edit cp -rfv ../skel /etc
+sudo chroot edit sh -c "cp -v ../images/wallpapers/*.jpg /usr/share/backgrounds/"
+sudo chroot edit cp -v ../images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
+sudo chroot edit bash ../build/build-radix-core.sh
 sudo chroot edit chsh -s /usr/bin/fish root
 sudo chroot edit wget -O oh-my-fish.sh https://get.oh-my.fish
 sudo chroot edit su -c "fish oh-my-fish.sh --noninteractive"
@@ -104,9 +104,9 @@ sudo find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | s
 
 # Geração da imagem de instalação
 
-sudo cp -v ../../radix/boot-files/*.cfg boot/grub
+sudo cp -v ../../../boot-files/*.cfg boot/grub
 sudo rm -rfv isolinux
-sudo cp -rfv ../../radix/boot-files/isolinux .
+sudo cp -rfv ../../../boot-files/isolinux .
 sudo cp ../edit/boot/initrd.img-*-generic casper/initrd
 sudo cp ../edit/boot/vmlinuz-*-generic casper/vmlinuz
 sudo apt install -y isolinux xorriso
@@ -126,4 +126,3 @@ sudo xorriso \
 -o "../iso/radix-core-amd64.iso" .
 md5sum ../iso/radix-core-amd64.iso | sudo tee ../iso/radix-core-amd64.md5
 sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 xorriso
-
