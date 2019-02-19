@@ -35,12 +35,12 @@ sudo chroot edit apt install -y build-essential curl git ruby-dev
 ### Execução do script de criação do sistema
 ```bash
 sudo chroot edit git clone https://bitbucket.org/rauldipeas/radix
-sudo chroot edit find ../core-repo -type f -exec dpkg -i {} \;
+sudo chroot edit find radix/core-repo -type f -exec dpkg -i {} \;
 sudo chroot edit apt install -f -y
-sudo chroot edit cp -rfv ../skel /etc
-sudo chroot edit sh -c "cp -v ../images/wallpapers/*.jpg /usr/share/backgrounds/"
-sudo chroot edit cp -v ../images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
-sudo chroot edit bash ../build/build-radix-core.sh
+sudo chroot edit cp -rfv radix/skel /etc
+sudo chroot edit sh -c "cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/"
+sudo chroot edit cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
+sudo chroot edit bash radix/build/build-radix-core.sh
 sudo chroot edit chsh -s /usr/bin/fish root
 sudo chroot edit wget -O oh-my-fish.sh https://get.oh-my.fish
 sudo chroot edit su -c "fish oh-my-fish.sh --noninteractive"
