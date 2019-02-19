@@ -1,16 +1,8 @@
 # Preparação de arquivos e pastas
 
-#mkdir -p ~/Público/radix-core
-#cd ~/Público/radix-core
-#rm -rfv radix
-#git clone https://bitbucket.org/rauldipeas/radix
-#sudo umount livecdtmp/mnt
-#sudo rm -rf livecdtmp
 mkdir -pv livecdtmp
 wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 cp -v xubuntu*.iso livecdtmp
-#rm -rfv simplechroot
-#wget https://gitlab.com/BobyMCbobs/simplechroot/raw/1.1.0/simplechroot;chmod +x -v simplechroot
 cd livecdtmp
 mkdir -pv mnt
 sudo mount -o loop xubuntu*.iso mnt

@@ -42,10 +42,6 @@ add-apt-repository -y ppa:damentz/liquorix
 
 add-apt-repository -y ppa:dyatlov-igor/materia-theme
 
-#apt install -y linux-image-liquorix-amd64 linux-headers-liquorix-amd64 #linux-xanmod
-#apt autoremove --purge -y linux-image-*generic linux-headers-*generic
-#rm -rfv /lib/modules/*generic* /boot/*generic*
-
 apt install -y curl deborphan gdebi-core git tilix
 
 apt autoremove --purge -y\
@@ -150,8 +146,6 @@ wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio
 wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
 gdebi -n kxstudio-repos_*.deb;gdebi -n kxstudio-repos-*.deb;apt update;apt dist-upgrade -y;rm -rf kxstudio*
 apt install -y alsa-firmware cadence;apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
-
-#sed -i 's/CHROMIUM_FLAGS=""/CHROMIUM_FLAGS="--password-store=basic"/g' /etc/chromium-browser/default
 
 echo '#!/bin/bash
 synclient VertScrollDelta=-58
@@ -285,18 +279,3 @@ echo '[SeatDefaults]
 autologin-user=radix
 user-session=xfce
 greeter-session=lightdm-webkit2-greeter' | tee /etc/lightdm/lightdm.conf
-
-#echo '**CORRIGIR AS PERMISSÕES DE ARQUIVO**'
-#echo '
-#sudo find Público/radix-core/squashfs-root/ -type d -user rauldipeas -exec chown -Rv root {} \;
-#sudo find Público/radix-core/squashfs-root/ -type d -exec chmod 755 -v {} \;
-#sudo find Público/radix-core/squashfs-root/ -type f -user rauldipeas -exec chown -Rv root {} \;
-#sudo chmod 440 -v Público/radix-core/squashfs-root/etc/sudoers
-#sudo chmod 04775 Público/radix-core/squashfs-root/usr/bin/sudo
-#sudo chmod 777 Público/radix-core/squashfs-root/tmp'
-
-#echo '**SETAR O FISH PARA O USUÁRIO ROOT**'
-#echo '
-#su;chsh -s /usr/bin/fish root
-#curl -L https://get.oh-my.fish | fish
-#omf install bobthefish'
