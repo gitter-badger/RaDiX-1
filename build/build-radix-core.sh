@@ -42,6 +42,8 @@ add-apt-repository -y ppa:damentz/liquorix
 
 add-apt-repository -y ppa:dyatlov-igor/materia-theme
 
+add-apt-repository -y ppa:webupd8team/y-ppa-manager
+
 apt install -y curl deborphan gdebi-core git tilix
 
 apt autoremove --purge -y\
@@ -131,6 +133,7 @@ apt install -y\
  xfdashboard-radix-theme\
  xscreensaver\
  xscreensaver-gl*\
+ y-ppa-manager\
  zram-config
 
 wget -c http://ppa.launchpad.net/appgrid/stable/ubuntu/pool/main/a/appgrid/appgrid_0.298_all.deb;gdebi -n appgrid*.deb;rm -rf appgrid*
