@@ -1,3 +1,6 @@
 steps:
   - label: ':ubuntu: Rodando o script de geração da ISO'
-    command: 'bash build/build-iso.sh'
+    command: 
+      - bash build/build-iso.sh
+      - sudo umount livecdtmp/mnt
+      - sudo rm -rf livecdtmp
