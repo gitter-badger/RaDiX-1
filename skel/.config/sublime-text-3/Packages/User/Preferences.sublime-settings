@@ -1,0 +1,8 @@
+{
+	"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Seti_orig.sublime-theme"
+}

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="panels" type="array">
+    <value type="int" value="0"/>
+    <value type="int" value="1"/>
+    <property name="panel-0" type="empty">
+      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="14"/>
+        <value type="int" value="8"/>
+        <value type="int" value="5"/>
+        <value type="int" value="3"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="7"/>
+        <value type="int" value="6"/>
+        <value type="int" value="2"/>
+        <value type="int" value="4"/>
+      </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="size" type="uint" value="26"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="span-monitors" type="bool" value="false"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.164706"/>
+        <value type="double" value="0.168627"/>
+        <value type="double" value="0.215686"/>
+        <value type="double" value="0.360000"/>
+      </property>
+    </property>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=4;x=1824;y=1064"/>
+      <property name="mode" type="uint" value="2"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="size" type="uint" value="100"/>
+      <property name="nrows" type="uint" value="1"/>
+      <property name="length" type="uint" value="10"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.750000"/>
+        <value type="double" value="0.250000"/>
+        <value type="double" value="0.250000"/>
+        <value type="double" value="0.000000"/>
+      </property>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="10"/>
+        <value type="int" value="15"/>
+      </property>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="whiskermenu"/>
+    <property name="plugin-6" type="string" value="notification-plugin"/>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
+    </property>
+    <property name="plugin-12" type="string" value="clock">
+      <property name="digital-format" type="string" value="%a, %d/%b  %H:%M"/>
+    </property>
+    <property name="plugin-7" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="appmenu">
+      <property name="plugins" type="empty">
+        <property name="plugin-14" type="empty">
+          <property name="compact-mode" type="bool" value="false"/>
+          <property name="bold-application-name" type="bool" value="true"/>
+          <property name="expand" type="bool" value="true"/>
+        </property>
+      </property>
+    </property>
+    <property name="plugin-10" type="string" value="netload"/>
+    <property name="plugin-15" type="string" value="systemload"/>
+    <property name="plugin-3" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="gmusicbrowser;parole;spotify;vlc;yarock"/>
+    </property>
+    <property name="plugin-4" type="string" value="wckbuttons"/>
+    <property name="plugin-2" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="15416901012.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-5" type="string" value="systray">
+      <property name="names-ordered" type="array">
+        <value type="string" value="grive-indicator"/>
+        <value type="string" value="calendar-indicator"/>
+        <value type="string" value="dptray"/>
+        <value type="string" value="orage"/>
+        <value type="string" value="gitter"/>
+        <value type="string" value="gmusicbrowser"/>
+        <value type="string" value="twitch-indicator"/>
+        <value type="string" value="mynotex"/>
+        <value type="string" value="skypeforlinux"/>
+        <value type="string" value="qjackctl"/>
+        <value type="string" value="gnome-ring"/>
+        <value type="string" value="tomboy"/>
+        <value type="string" value="venom"/>
+        <value type="string" value="qps"/>
+        <value type="string" value="osmo 0.4.2"/>
+        <value type="string" value="trojita"/>
+        <value type="string" value="q4wine"/>
+        <value type="string" value="rednotebook"/>
+        <value type="string" value="stacer"/>
+        <value type="string" value="yarock"/>
+        <value type="string" value="parole"/>
+        <value type="string" value="wallch"/>
+        <value type="string" value="redshift-gtk"/>
+        <value type="string" value="flameshot"/>
+        <value type="string" value="kde connect indicator"/>
+        <value type="string" value="teamviewer"/>
+        <value type="string" value="thunar"/>
+        <value type="string" value="transmission"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="cadence"/>
+        <value type="string" value="miniaplicativo gerenciador de redes"/>
+        <value type="string" value="mono"/>
+        <value type="string" value="indicator-kdeconnect"/>
+        <value type="string" value="claws-mail"/>
+        <value type="string" value="rambox"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="diodon"/>
+        <value type="string" value="rede"/>
+      </property>
+      <property name="size-max" type="uint" value="20"/>
+      <property name="show-frame" type="bool" value="false"/>
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="names-hidden" type="array">
+      </property>
+    </property>
+    <property name="plugin-8" type="string" value="places">
+      <property name="show-button-type" type="int" value="0"/>
+      <property name="mount-open-volumes" type="bool" value="true"/>
+      <property name="search-cmd" type="string" value="catfish"/>
+      <property name="show-icons" type="bool" value="true"/>
+      <property name="show-volumes" type="bool" value="true"/>
+      <property name="show-bookmarks" type="bool" value="true"/>
+      <property name="show-recent" type="bool" value="true"/>
+      <property name="button-label" type="string" value="Locais"/>
+      <property name="show-recent-clear" type="bool" value="true"/>
+    </property>
+  </property>
+  <property name="configver" type="int" value="2"/>
+</channel>

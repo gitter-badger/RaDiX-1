@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Encerrar sessão
+Comment=Deslogar do ambiente Xfce
+Exec=sh -c 'xfce4-panel --quit&&oblogout&&xfce4-panel'
+Icon=system-devices-panel
+Path=
+Terminal=false
+StartupNotify=false
