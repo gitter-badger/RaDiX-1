@@ -34,6 +34,10 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | apt-key add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main" | tee /etc/apt/sources.list.d/brave-browser-release-`lsb_release -sc`.list
 
+echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/xUbuntu_17.10/ /' | tee /etc/apt/sources.list.d/compiz-reloaded.list
+wget -qO- http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/Debian_Testing/Release.key | apt-key add -
+
+
 add-apt-repository -y ppa:teejee2008/ppa
 
 add-apt-repository -y ppa:graphics-drivers/ppa
@@ -84,6 +88,7 @@ apt install -y\
  breeze-cursor-theme\
  catfish\
  color-ls\
+ compiz-reloaded\
  diodon\
  fish\
  fonts-powerline\
@@ -115,6 +120,7 @@ apt install -y\
  python3-distutils\
  python3-setuptools\
  qt4-qtconfig\
+ qt5-style-kvantum\
  qt5-style-plugin-gtk2\
  qt5ct\
  rar\
@@ -125,6 +131,7 @@ apt install -y\
  undistract-me\
  unrar\
  winbind\
+ wm-switcher\
  xarchiver\
  xcape\
  xdotool\
@@ -146,6 +153,8 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.
 apt update;apt -y install sublime-text
 
 apt install -y alsa-firmware cadence;apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
+
+echo NoDisplay=true | tee -a /usr/share/applications/emerald* /usr/share/applications/fusion-icon*
 
 echo '#!/bin/bash
 synclient VertScrollDelta=-58
