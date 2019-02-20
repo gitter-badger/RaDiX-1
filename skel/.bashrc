@@ -58,3 +58,13 @@ source "$BASH_IT"/bash_it.sh
 # Undistract-Me
 . /usr/share/undistract-me/long-running.bash
 notify_when_long_running_commands_finish_install
+
+# Bash Completion
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
