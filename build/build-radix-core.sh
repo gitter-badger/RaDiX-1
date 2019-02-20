@@ -144,10 +144,10 @@ wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 apt update;apt -y install sublime-text
 
-apt install -y apt-transport-https libglibmm-2.4-1v5 software-properties-common wget
-wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
-wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
-gdebi -n kxstudio-repos_*.deb;gdebi -n kxstudio-repos-*.deb;apt update;apt dist-upgrade -y;rm -rf kxstudio*
+#apt install -y apt-transport-https libglibmm-2.4-1v5 software-properties-common wget
+#wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
+#wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
+#gdebi -n kxstudio-repos_*.deb;gdebi -n kxstudio-repos-*.deb;apt update;apt dist-upgrade -y;rm -rf kxstudio*
 apt install -y alsa-firmware cadence;apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
 
 echo '#!/bin/bash
