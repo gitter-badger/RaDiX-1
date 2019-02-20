@@ -1,12 +1,9 @@
 ### Preparação de arquivos e pastas
 ```bash
-mkdir -pv livecdtmp
 wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 cp -v xubuntu*.iso livecdtmp
 cd livecdtmp
-mkdir -pv mnt
 sudo mount -o loop xubuntu*.iso mnt
-mkdir -pv extract-cd
 sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
 sudo unsquashfs mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
@@ -102,7 +99,6 @@ sudo cp -rfv ../../boot-files/isolinux .
 sudo cp ../edit/boot/initrd.img-*-generic casper/initrd
 sudo cp ../edit/boot/vmlinuz-*-generic casper/vmlinuz
 sudo apt install -y isolinux xorriso
-sudo mkdir -p ../iso
 sudo xorriso \
 -as mkisofs -r -V "$IMAGE_NAME" -cache-inodes -J -l \
 -b isolinux/isolinux.bin \

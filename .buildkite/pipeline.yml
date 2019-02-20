@@ -1,5 +1,5 @@
 steps:
-  - label: ':ubuntu: Rodando o script de geração da ISO'
+  - label: ':carrot: Gerando a ISO do RaDiX'
     commands: 
       - bash build/build-iso.sh
-      - sudo rm -rf livecdtmp
+      - sudo rm -rf livecdtmp/edit
