@@ -254,7 +254,7 @@ sed -i 's/#EXTRA_GROUPS/EXTRA_GROUPS/g' /etc/adduser.conf
 sed -i 's/plugdev users/plugdev users input/g' /etc/adduser.conf
 sed -i 's/#ADD_EXTRA_GROUPS/ADD_EXTRA_GROUPS/g' /etc/adduser.conf
 
-wget -c https://bitbucket.org/rauldipeas/radix/raw/da90c43c86dc45f510fb22e8b38213374e0b7cc1/wget-files/grub-themes-vimix.tar.xz
+wget -c https://github.com/rauldipeas/RaDiX/raw/master/wget-files/grub-theme-vimix.tar.xz
 tar -Jxf grub-themes-vimix.tar.xz
 mkdir -p /boot/grub/themes
 cd grub-themes-vimix

@@ -34,7 +34,7 @@ sudo chroot edit apt install -y build-essential curl git ruby-dev
 ```
 ### Execução do script de criação do sistema
 ```bash
-sudo chroot edit git clone https://bitbucket.org/rauldipeas/radix
+sudo chroot edit git clone https://github.com/rauldipeas/radix
 sudo chroot edit find radix/core-repo -type f -exec dpkg -i {} \;
 sudo chroot edit apt install -f -y
 sudo chroot edit cp -rfv radix/skel /etc
