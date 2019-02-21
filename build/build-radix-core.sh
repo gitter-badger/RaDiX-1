@@ -48,6 +48,10 @@ add-apt-repository -y ppa:dyatlov-igor/materia-theme
 
 add-apt-repository -y ppa:webupd8team/y-ppa-manager
 
+add-apt-repository -y ppa:papirus/papirus-dev
+
+add-apt-repository -y ppa:andreas-angerer89/sni-qt-patched
+
 apt install -y curl deborphan gdebi-core git tilix
 
 apt autoremove --purge -y\
