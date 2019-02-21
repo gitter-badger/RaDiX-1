@@ -51,6 +51,7 @@
       <Filename>mugshot.desktop</Filename>
       <Filename>q4wine.desktop</Filename>
       <Filename>plank-preferences.desktop</Filename>
+      <Filename>ccsm.desktop</Filename>
     </Include>
     <Exclude>
       <Filename>xfdashboard-settings.desktop</Filename>
@@ -69,7 +70,7 @@
     </Include>
     <Include>
     	<Filename>blueman-adapters.desktop</Filename>
-      <Filename>cadence.desktop</Filename>
+      	<Filename>cadence.desktop</Filename>
     	<Filename>catia.desktop</Filename>
     	<Filename>org.gnome.DiskUtility.desktop</Filename>
     	<Filename>org.gnome.Usage.desktop</Filename>
@@ -80,12 +81,13 @@
     	<Filename>nvidia-settings.desktop</Filename>
     	<Filename>pavucontrol.desktop</Filename>
     	<Filename>software-properties-drivers.desktop</Filename>
-      <Filename>system-config-printer.desktop</Filename>
-      <Filename>thunar-volman-settings.desktop</Filename>
-      <Filename>rygel-preferences.desktop</Filename>
-      <Filename>gnome-alsamixer.desktop</Filename>
-      <Filename>org.cunidev.gestures.desktop</Filename>
-      <Filename>indicator-kdeconnect.desktop</Filename>
+      	<Filename>system-config-printer.desktop</Filename>
+      	<Filename>thunar-volman-settings.desktop</Filename>
+      	<Filename>rygel-preferences.desktop</Filename>
+      	<Filename>gnome-alsamixer.desktop</Filename>
+      	<Filename>org.cunidev.gestures.desktop</Filename>
+      	<Filename>indicator-kdeconnect.desktop</Filename>
+      	<Filename>blueman-manager.desktop</Filename>
     </Include>
   </Menu>
 
@@ -106,10 +108,11 @@
     	<Filename>synaptic.desktop</Filename>
     	<Filename>appgrid.desktop</Filename>
     	<Filename>PlayOnLinux.desktop</Filename>
-      <Filename>users.desktop</Filename>
-      <Filename>airwave-manager.desktop</Filename>
-      <Filename>galternatives.desktop</Filename>
-      <Filename>grive-setup.desktop</Filename>
+      	<Filename>users.desktop</Filename>
+      	<Filename>airwave-manager.desktop</Filename>
+      	<Filename>galternatives.desktop</Filename>
+      	<Filename>grive-setup.desktop</Filename>
+      	<Filename>gnome-language-selector.desktop</Filename>
     </Include>    
   </Menu>
 

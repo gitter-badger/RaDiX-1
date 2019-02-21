@@ -52,6 +52,12 @@
 		<Exclude>
 			<Filename>yad-icon-browser.desktop</Filename>
 		</Exclude>
+		<Exclude>
+			<Filename>gupnp-network-light.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>gupnp-universal-cp.desktop</Filename>
+		</Exclude>
 	</Menu>
 	<Menu>
 		<Name>Multimedia</Name>
@@ -102,6 +108,15 @@
 		</Exclude>
 		<Exclude>
 			<Filename>megasync.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>dolphin-emu.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>yuzu.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>system-config-printer.desktop</Filename>
 		</Exclude>
 	</Menu>
 	<Menu>
@@ -160,6 +175,15 @@
 		</Exclude>
 		<Exclude>
 			<Filename>org.kde.kdeconnect.nonplasma.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>steam.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>Graphics</Name>
+		<Exclude>
+			<Filename>libreoffice-draw.desktop</Filename>
 		</Exclude>
 	</Menu>
 </Menu>
