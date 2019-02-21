@@ -146,7 +146,7 @@ apt install -y\
 
 wget -c http://ppa.launchpad.net/appgrid/stable/ubuntu/pool/main/a/appgrid/appgrid_0.298_all.deb;gdebi -n appgrid*.deb;rm -rf appgrid*
 
-wget -c https://github.com/ramboxapp/community-edition/releases/download/0.6.2/Rambox-0.6.2-linux-amd64.deb;gdebi -n Rambox*.deb;rm -rf Rambox*
+hardcode-tray --apply --size 16 --only rambox.electron,rambox
 
 wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
@@ -216,7 +216,6 @@ sed -i 's/Exec=thunar %F/Exec=thunar %u/g' /usr/share/applications/Thunar-plank-
 echo 'NoDisplay=true' | tee -a /usr/share/applications/Thunar-plank-trash.desktop 
 echo 'x-scheme-handler/trash=Thunar-plank-trash.desktop;' | tee -a /usr/share/applications/mimeinfo.cache
 
-sed -i 's/Icon=galternatives/Icon=xfce4-settings/g' /usr/share/applications/galternatives.desktop
 sed -i 's/Icon=\/usr\/share\/hardinfo\/pixmaps\/logo.png/Icon=hardinfo/g' /usr/share/applications/hardinfo.desktop
 
 echo '[Desktop Entry]
