@@ -37,7 +37,6 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic ma
 echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/xUbuntu_17.10/ /' | tee /etc/apt/sources.list.d/compiz-reloaded.list
 wget -qO- http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/Debian_Testing/Release.key | apt-key add -
 
-
 add-apt-repository -y ppa:teejee2008/ppa
 
 add-apt-repository -y ppa:graphics-drivers/ppa
