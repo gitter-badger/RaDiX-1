@@ -149,8 +149,6 @@ apt install -y\
 
 wget -c http://ppa.launchpad.net/appgrid/stable/ubuntu/pool/main/a/appgrid/appgrid_0.298_all.deb;gdebi -n appgrid*.deb;rm -rf appgrid*
 
-hardcode-tray --apply --size 16 --only rambox.electron,rambox
-
 wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 apt update;apt -y install sublime-text
