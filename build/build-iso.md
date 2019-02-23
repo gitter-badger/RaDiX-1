@@ -99,6 +99,7 @@ sudo find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | s
 ### Geração da imagem de instalação
 ```bash
 sudo cp -v ../../boot-files/*.cfg boot/grub
+sudo cp -rv ../../boot-files/themes boot/grub/
 sudo rm -rfv isolinux
 sudo cp -rfv ../../boot-files/isolinux .
 sudo cp ../edit/boot/initrd.img-*-generic casper/initrd
