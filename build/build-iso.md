@@ -121,5 +121,5 @@ sudo xorriso \
 md5sum ../iso/radix-core-amd64.iso | sudo tee ../iso/radix-core-amd64.md5
 sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 xorriso
 sudo umount ../mnt
-wget -O- https://radix.ws/iso/upload-iso.sh | bash
+#wget -O- https://radix.ws/iso/upload-iso.sh | bash
 ```
