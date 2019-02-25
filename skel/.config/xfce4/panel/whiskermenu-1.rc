@@ -1,7 +1,7 @@
 favorites=
 recent=
 button-title=Applications Menu
-button-icon=/usr/share/icons/Papirus-Dark/16x16/actions/view-media-playlist.svg
+button-icon=/opt/radix-desktop/menu.png
 button-single-row=false
 show-button-title=false
 show-button-icon=true
