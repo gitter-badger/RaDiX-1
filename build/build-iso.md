@@ -37,8 +37,27 @@ sudo chroot edit wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudi
 sudo chroot edit find / -type f -name "*.deb" -exec dpkg -i {} \;
 sudo chroot edit sh -c "apt update;apt dist-upgrade -y;rm -rf kxstudio*"
 sudo chroot edit git clone https://github.com/rauldipeas/radix
-sudo chroot edit find radix/core-repo -type f -exec dpkg -i {} \;
-sudo chroot edit apt install -f -y
+#sudo chroot edit find radix/core-repo -type f -exec dpkg -i {} \;
+#sudo chroot edit apt install -f -y
+sudo chroot edit apt install -y rauldipeas-repo
+# bashrun\
+# color-ls\
+# gksu\
+# hud-menu\
+# libgksu2-0\
+# lightdm-webkit2-greeter\
+# lightdm-webkit2-greeter-litarvan\
+# oblogout\
+# pix\
+# pix-data\
+# radix-darwin-plymouth\
+# rambox\
+# rauldipeas-repo\
+# translate-highlighted-text\
+# xfce4-places-plugin\
+# xfce4-windowck-plugin\
+# xfce-panel-dynamic\
+# xfdashboard-radix-theme
 sudo chroot edit cp -rfv radix/skel /etc
 sudo chroot edit sh -c "cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/"
 sudo chroot edit cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
