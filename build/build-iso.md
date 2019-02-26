@@ -1,12 +1,16 @@
 ### Preparação de arquivos e pastas
 ```bash
-wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
-cp -v xubuntu*.iso livecdtmp
+#wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
+#cp -v xubuntu*.iso livecdtmp
+sudo apt install -y debootstrap
 cd livecdtmp
-sudo mount -o loop xubuntu*.iso mnt
-sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
-sudo unsquashfs mnt/casper/filesystem.squashfs
-sudo mv squashfs-root edit
+mkdir edit
+sudo debootstrap --arch=amd64 cosmic edit
+sudo apt autoremove --purge -y debootstrap
+#sudo mount -o loop xubuntu*.iso mnt
+#sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
+#sudo unsquashfs mnt/casper/filesystem.squashfs
+#sudo mv squashfs-root edit
 ```
 ### Montagem do ambiente chroot
 ```bash
