@@ -1,7 +1,8 @@
 # Preparação de arquivos e pastas
 
-wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
-cp -v xubuntu*.iso livecdtmp
+#wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
+#cp -v xubuntu*.iso livecdtmp
+cp -v /home/rauldipeas/xubuntu-18.10-core-amd64.iso livecdtmp/
 cd livecdtmp
 #sudo apt install -y debootstrap
 #mkdir edit
