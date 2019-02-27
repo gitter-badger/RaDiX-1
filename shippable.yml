@@ -1,0 +1,8 @@
+language:   Shell
+build:
+  pre_ci_boot:
+    image_name: ubuntu:bionic
+    options: 
+  ci:
+    - sudo apt update
+    - sudo apt install rsync -y
