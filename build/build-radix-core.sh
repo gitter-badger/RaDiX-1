@@ -229,6 +229,22 @@ sed -i 's/took/levou/g' /usr/share/undistract-me/long-running.bash
 sed -i 's/dialog-information/xterm/g' /usr/share/undistract-me/long-running.bash
 sed -i 's/Long\ command\ completed/Comando\ concluído\!/g' /usr/share/undistract-me/long-running.bash
 
+echo "[Desktop Entry]
+Type=Application
+Name=Bash It
+Exec=bash /opt/radix-desktop/bash_it.sh
+Icon=xterm
+StartupNotify=true1" | tee /etc/xdg/autostart/bash_it.desktop
+
+echo "#!/bin/bash
+bash ~/.bash_it/install.sh --silent
+sed -i 's/bobby/powerline/g' ~/.bashrc
+echo '
+# Undistract-Me
+. /usr/share/undistract-me/long-running.bash
+notify_when_long_running_commands_finish_install' | tee -a ~/bashrc
+echo 'Hidden=true' | tee ~/.config/autostart/bash_it.desktop" | tee /opt/radix-desktop/bash_it.sh
+
 #echo '#!/bin/bash
 #notify-send -t 800 -i flameshot A\ captura\ de\ tela\ iniciará\ em\ 5\ segundos...;sleep 1
 #notify-send -t 800 -i flameshot A\ captura\ de\ tela\ iniciará\ em\ 4\ segundos...;sleep 1

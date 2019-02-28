@@ -139,9 +139,9 @@ function scm_prompt_info_common {
   fi
 
   # TODO: consider adding minimal status information for hg and svn
-  [[ ${SCM} == ${SCM_P4} ]] && p4_prompt_info && return
-  [[ ${SCM} == ${SCM_HG} ]] && hg_prompt_info && return
-  [[ ${SCM} == ${SCM_SVN} ]] && svn_prompt_info && return
+  { [[ ${SCM} == ${SCM_P4} ]] && p4_prompt_info && return; } || true
+  { [[ ${SCM} == ${SCM_HG} ]] && hg_prompt_info && return; } || true
+  { [[ ${SCM} == ${SCM_SVN} ]] && svn_prompt_info && return; } || true
 }
 
 function git_prompt_minimal_info {
@@ -334,6 +334,10 @@ function chruby_version_prompt {
 
 function ruby_version_prompt {
   echo -e "$(rbfu_version_prompt)$(rbenv_version_prompt)$(rvm_version_prompt)$(chruby_version_prompt)"
+}
+
+function k8s_context_prompt {
+  echo -e "$(kubectl config current-context)"
 }
 
 function virtualenv_prompt {
