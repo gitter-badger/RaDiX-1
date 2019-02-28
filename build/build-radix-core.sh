@@ -229,8 +229,6 @@ sed -i 's/took/levou/g' /usr/share/undistract-me/long-running.bash
 sed -i 's/dialog-information/xterm/g' /usr/share/undistract-me/long-running.bash
 sed -i 's/Long\ command\ completed/Comando\ concluído\!/g' /usr/share/undistract-me/long-running.bash
 
-git clone --depth=1 https://github.com/Bash-it/bash-it.git /opt/bash_it
-
 #echo '#!/bin/bash
 #notify-send -t 800 -i flameshot A\ captura\ de\ tela\ iniciará\ em\ 5\ segundos...;sleep 1
 #notify-send -t 800 -i flameshot A\ captura\ de\ tela\ iniciará\ em\ 4\ segundos...;sleep 1
