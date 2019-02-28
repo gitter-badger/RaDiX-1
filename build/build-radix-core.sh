@@ -242,7 +242,8 @@ sed -i 's/bobby/powerline/g' ~/.bashrc
 echo '
 # Undistract-Me
 . /usr/share/undistract-me/long-running.bash
-notify_when_long_running_commands_finish_install' | tee -a ~/bashrc
+notify_when_long_running_commands_finish_install' | tee -a ~/.bashrc
+mkdir ~/.config/autostart
 echo 'Hidden=true' | tee ~/.config/autostart/bash_it.desktop" | tee /opt/radix-desktop/bash_it.sh
 
 #echo '#!/bin/bash
