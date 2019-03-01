@@ -83,7 +83,7 @@ apt autoremove --purge -y\
  xubuntu*\
  yelp*\
 
-apt install -y rauldipeas-repo
+apt install -y rauldipeas-repo materia-gtk-theme
 
 # alacarte\
 # arc-theme\
