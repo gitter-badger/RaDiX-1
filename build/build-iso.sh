@@ -29,7 +29,7 @@ sudo chroot edit ln -s /bin/true /sbin/initctl
 # Instalação de repositórios e ferramentas
 
 sudo chroot edit sh -c "echo deb https://radix.ws/core-repo cosmic main > /etc/apt/sources.list.d/rauldipeas.list"
-sudo chroot edit sh -c "echo deb http://storage.radix.ws/large-repo cosmic main >> /etc/apt/sources.list.d/rauldipeas.list"
+sudo chroot edit sh -c "echo deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main >> /etc/apt/sources.list.d/rauldipeas.list"
 sudo chroot edit sh -c "wget https://radix.ws/core-repo/rauldipeas.key;apt-key add rauldipeas.key"
 sudo chroot edit apt update
 sudo chroot edit apt install -y build-essential curl git ruby-dev
@@ -42,8 +42,7 @@ sudo chroot edit wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudi
 sudo chroot edit find / -type f -name "*.deb" -exec dpkg -i {} \;
 sudo chroot edit sh -c "apt update;apt dist-upgrade -y;rm -rf kxstudio*"
 sudo chroot edit git clone https://github.com/rauldipeas/radix
-sudo chroot edit apt install -y rauldipeas-repo
-sudo chroot edit cp -rfv radix/skel /etc
+sudo chroot edit cp -rv radix/skel /etc
 sudo chroot edit sh -c "cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/"
 sudo chroot edit cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
 sudo chroot edit bash radix/build/build-radix-core.sh

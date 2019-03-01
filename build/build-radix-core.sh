@@ -83,7 +83,8 @@ apt autoremove --purge -y\
  xubuntu*\
  yelp*\
 
-#apt install -y\
+apt install -y rauldipeas-repo
+
 # alacarte\
 # arc-theme\
 # bat\
