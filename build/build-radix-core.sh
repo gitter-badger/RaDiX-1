@@ -82,9 +82,9 @@ apt autoremove --purge -y\
  xfce4-statusnotifier-plugin\
  xfce4-terminal\
  xubuntu*\
- yelp*\
+ yelp*
 # Instalação do repositório e das customizações do RaDiX
-apt install -y rauldipeas-repo materia-gtk-theme
+apt install -y rauldipeas-repo materia-gtk-theme compiz-reloaded
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
 # Natural Scrolling (Converter dem Deb)
