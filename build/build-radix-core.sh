@@ -1,7 +1,8 @@
 #!/bin/bash
 # RaDiX - Core baseado no Xubuntu Core
 # XanMod (Converter dem Deb)
-echo 'deb http://deb.xanmod.org releases main' > /etc/apt/sources.list.d/xanmod-kernel.list && wget -qO - https://dl.xanmod.org/gpg.key | apt-key add -
+echo 'deb http://deb.xanmod.org releases main' > /etc/apt/sources.list.d/xanmod-kernel.list
+wget -qO - https://dl.xanmod.org/gpg.key | apt-key add -
 # WINE (Converter dem Deb)
 wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard/Release.key;apt-key add Release.key;rm -rf Release.key
 echo 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard ./' > /etc/apt/sources.list.d/winehq.list
