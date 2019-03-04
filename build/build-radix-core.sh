@@ -88,6 +88,11 @@ apt autoremove --purge -y\
 apt install -y rauldipeas-repo materia-gtk-theme compiz-reloaded
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
+# LightDM
+echo '[SeatDefaults]
+autologin-user=radix
+user-session=xfce
+greeter-session=lightdm-webkit2-greeter' > /etc/lightdm/lightdm.conf
 # Natural Scrolling (Converter dem Deb)
 echo '#!/bin/bash
 synclient VertScrollDelta=-58
