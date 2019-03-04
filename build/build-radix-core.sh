@@ -92,7 +92,7 @@ apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* 
 echo '[SeatDefaults]
 autologin-user=radix
 user-session=xfce
-greeter-session=lightdm-webkit2-greeter' > /etc/lightdm/lightdm.conf
+greeter-session=lightdm-webkit-greeter' > /etc/lightdm/lightdm.conf
 # Natural Scrolling (Converter dem Deb)
 echo '#!/bin/bash
 synclient VertScrollDelta=-58
