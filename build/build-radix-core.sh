@@ -1,5 +1,4 @@
 #!/bin/bash
-# RaDiX - Core baseado no Xubuntu Core
 # XanMod (Converter dem Deb)
 echo 'deb http://deb.xanmod.org releases main' > /etc/apt/sources.list.d/xanmod-kernel.list
 wget -qO - https://dl.xanmod.org/gpg.key | apt-key add -
