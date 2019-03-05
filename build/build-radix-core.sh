@@ -101,12 +101,15 @@ apt autoremove --purge -y\
  xubuntu*\
  yelp*
 # Instalação do repositório e das customizações do RaDiX
-apt install -y rauldipeas-repo materia-gtk-theme compiz-reloaded
+apt install -y browser-selector compiz-reloaded materia-gtk-theme rauldipeas-repo
 # Remoção de pacotes desnecessários
-apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
+apt autoremove --purge -y brave-browser brave-keyring build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
+rm -rf /etc/apt/sources.list.d/brave-browser.list
 # Wallpapers e ícone do GRUB
 cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/
 cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
+# App Grid
+sed -i 's/Exec=\/usr\/share\/appgrid\/appgrid.py %u/Exec=sh -c "env GTK_THEME=Arc \/usr\/share\/appgrid\/appgrid.py %u"/g' /usr/share/applications/appgrid.desktop
 # LightDM
 echo '[SeatDefaults]
 autologin-user=radix
