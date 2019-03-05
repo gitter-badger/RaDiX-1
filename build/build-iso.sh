@@ -32,7 +32,7 @@ sudo chroot edit sh -c "echo deb https://radix.ws/core-repo cosmic main > /etc/a
 sudo chroot edit sh -c "echo deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main >> /etc/apt/sources.list.d/rauldipeas.list"
 sudo chroot edit sh -c "wget https://radix.ws/core-repo/rauldipeas.key;apt-key add rauldipeas.key"
 sudo chroot edit apt update
-sudo chroot edit apt install -y build-essential curl git ruby-dev
+sudo chroot edit apt install -y apt-transport-https libglibmm-2.4-1v5 software-properties-common wget  ruby-dev
 
 # Execução do script de criação do sistema
 
