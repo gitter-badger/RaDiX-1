@@ -36,7 +36,7 @@ sudo chroot edit apt install -y build-essential curl git ruby-dev
 
 # Execução do script de criação do sistema
 
-sudo chroot edit apt install -y apt-transport-https libglibmm-2.4-1v5 software-properties-common wget
+sudo chroot edit apt install -y 
 sudo chroot edit wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
 sudo chroot edit wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
 sudo chroot edit find / -type f -name "*.deb" -exec dpkg -i {} \;
