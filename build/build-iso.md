@@ -28,6 +28,7 @@ sudo chroot edit ln -s /bin/true /sbin/initctl
 ```
 ### Execução do script de criação do sistema
 ```bash
+sudo chroot edit sh -c "apt update;apt install -y git wget"
 sudo chroot edit git clone https://github.com/rauldipeas/radix
 sudo chroot edit bash radix/build/build-radix-core.sh
 sudo chroot edit chsh -s /usr/bin/fish root
