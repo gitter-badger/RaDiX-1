@@ -1,4 +1,15 @@
 #!/bin/bash
+
+# Raul Dipeas Repo
+echo deb https://radix.ws/core-repo cosmic main > /etc/apt/sources.list.d/rauldipeas.list
+echo deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main >> /etc/apt/sources.list.d/rauldipeas.list
+wget https://radix.ws/core-repo/rauldipeas.key;apt-key add rauldipeas.key;rm -rf rauldipeas.key
+apt update;apt install -y apt-transport-https build-essential curl git libglibmm-2.4-1v5 ruby-dev software-properties-common wget
+# KXStudio
+wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
+wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
+find / -type f -name "*.deb" -exec dpkg -i {} \;
+apt update;apt dist-upgrade -y;rm -rf kxstudio*
 # XanMod (Converter em Deb)
 echo 'deb http://deb.xanmod.org releases main' > /etc/apt/sources.list.d/xanmod-kernel.list
 wget -qO - https://dl.xanmod.org/gpg.key | apt-key add -
@@ -93,6 +104,9 @@ apt autoremove --purge -y\
 apt install -y rauldipeas-repo materia-gtk-theme compiz-reloaded
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
+# Wallpapers e ícone do GRUB
+cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/
+cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
 # LightDM
 echo '[SeatDefaults]
 autologin-user=radix

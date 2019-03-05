@@ -26,25 +26,9 @@ sudo chroot edit sh -c "dbus-uuidgen > /var/lib/dbus/machine-id"
 sudo chroot edit dpkg-divert --local --rename --add /sbin/initctl
 sudo chroot edit ln -s /bin/true /sbin/initctl
 ```
-### Instalação de repositórios e ferramentas
-```bash
-sudo chroot edit sh -c "echo deb https://radix.ws/core-repo cosmic main > /etc/apt/sources.list.d/rauldipeas.list"
-sudo chroot edit sh -c "echo deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main >> /etc/apt/sources.list.d/rauldipeas.list"
-sudo chroot edit sh -c "wget https://radix.ws/core-repo/rauldipeas.key;apt-key add rauldipeas.key"
-sudo chroot edit apt update
-sudo chroot edit apt install -y build-essential curl git ruby-dev
-```
 ### Execução do script de criação do sistema
 ```bash
-sudo chroot edit apt install -y apt-transport-https libglibmm-2.4-1v5 software-properties-common wget
-sudo chroot edit wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
-sudo chroot edit wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
-sudo chroot edit find / -type f -name "*.deb" -exec dpkg -i {} \;
-sudo chroot edit sh -c "apt update;apt dist-upgrade -y;rm -rf kxstudio*"
 sudo chroot edit git clone https://github.com/rauldipeas/radix
-sudo chroot edit cp -rv radix/skel /etc
-sudo chroot edit sh -c "cp -v radix/images/wallpapers/*.jpg /usr/share/backgrounds/"
-sudo chroot edit cp -v radix/images/logos/grub.png /boot/grub/themes/Vimix/icons/radix.png
 sudo chroot edit bash radix/build/build-radix-core.sh
 sudo chroot edit chsh -s /usr/bin/fish root
 sudo chroot edit wget -O oh-my-fish.sh https://get.oh-my.fish
