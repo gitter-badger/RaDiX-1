@@ -21,7 +21,7 @@ wget -qO- http://deb.playonlinux.com/public.gpg | apt-key add -
 wget http://deb.playonlinux.com/playonlinux_cosmic.list -O /etc/apt/sources.list.d/playonlinux.list
 # VirtualBox (Converter em Deb)
 wget -qO- https://www.virtualbox.org/download/oracle_vbox_2016.asc | apt-key add -
-echo 'deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian `lsb_release -s -c` contrib' > /etc/apt/sources.list.d/oracle-virtualbox.list
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian `lsb_release -s -c` contrib" > /etc/apt/sources.list.d/oracle-virtualbox.list
 # Skype (Converter em Deb)
 wget -qO- https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add -
 echo 'deb https://repo.skype.com/deb stable main' > /etc/apt/sources.list.d/skype-stable.list
@@ -37,7 +37,7 @@ echo 'deb https://deb.etcher.io stable etcher' > /etc/apt/sources.list.d/etcher.
 # Code (Converter em Deb)
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/;rm microsoft.gpg
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list
+echo 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main' > /etc/apt/sources.list.d/vscode.list
 # Chrome (Converter em Deb)
 wget -qO- https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google-chrome.list
