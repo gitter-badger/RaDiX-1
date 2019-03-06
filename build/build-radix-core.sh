@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Raul Dipeas Repo
 echo 'deb https://radix.ws/core-repo cosmic main' > /etc/apt/sources.list.d/rauldipeas.list
 echo 'deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main' >> /etc/apt/sources.list.d/rauldipeas.list
