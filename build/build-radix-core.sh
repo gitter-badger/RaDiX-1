@@ -1,61 +1,62 @@
 #!/bin/bash
 
 # Raul Dipeas Repo
-echo deb https://radix.ws/core-repo cosmic main > /etc/apt/sources.list.d/rauldipeas.list
-echo deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main >> /etc/apt/sources.list.d/rauldipeas.list
-wget https://radix.ws/core-repo/rauldipeas.key;apt-key add rauldipeas.key;rm -rf rauldipeas.key
+echo 'deb https://radix.ws/core-repo cosmic main' > /etc/apt/sources.list.d/rauldipeas.list
+echo 'deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main' >> /etc/apt/sources.list.d/rauldipeas.list
+wget -qO- https://radix.ws/core-repo/rauldipeas.key | apt-key add -
 apt update;apt install -y apt-transport-https build-essential curl libglibmm-2.4-1v5 ruby-dev software-properties-common
 # KXStudio
 wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
 wget -c https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
 find / -type f -name "*.deb" -exec dpkg -i {} \;
 apt update;apt dist-upgrade -y;rm -rf kxstudio*
+
 # XanMod (Converter em Deb)
+wget -qO- https://dl.xanmod.org/gpg.key | apt-key add -
 echo 'deb http://deb.xanmod.org releases main' > /etc/apt/sources.list.d/xanmod-kernel.list
-wget -qO - https://dl.xanmod.org/gpg.key | apt-key add -
 # WINE (Converter em Deb)
-wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard/Release.key;apt-key add Release.key;rm -rf Release.key
+wget -qO- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard/Release.key | apt-key add -
 echo 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.10_standard ./' > /etc/apt/sources.list.d/winehq.list
 # PlayOnLinux (Converter em Deb)
-wget -q "http://deb.playonlinux.com/public.gpg" -O- | apt-key add -
+wget -qO- http://deb.playonlinux.com/public.gpg | apt-key add -
 wget http://deb.playonlinux.com/playonlinux_cosmic.list -O /etc/apt/sources.list.d/playonlinux.list
 # VirtualBox (Converter em Deb)
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | apt-key add -
-echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian `lsb_release -s -c` contrib" > /etc/apt/sources.list.d/oracle-virtualbox.list
+wget -qO- https://www.virtualbox.org/download/oracle_vbox_2016.asc | apt-key add -
+echo 'deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian `lsb_release -s -c` contrib' > /etc/apt/sources.list.d/oracle-virtualbox.list
 # Skype (Converter em Deb)
-wget -q -O - https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add -
-echo "deb https://repo.skype.com/deb stable main" > /etc/apt/sources.list.d/skype-stable.list
+wget -qO- https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add -
+echo 'deb https://repo.skype.com/deb stable main' > /etc/apt/sources.list.d/skype-stable.list
 # Spotify (Converter em Deb)
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo 'deb http://repository.spotify.com stable non-free' > /etc/apt/sources.list.d/spotify.list
 # FreeOffice (Converter em Deb)
-wget -c https://shop.softmaker.com/repo/linux-repo-public.key;apt-key add linux-repo-public.key;rm -rf linux-repo-public.key
+wget -qO- https://shop.softmaker.com/repo/linux-repo-public.key | apt-key add -
 echo 'deb https://shop.softmaker.com/repo/apt wheezy non-free' > /etc/apt/sources.list.d/softmaker-freeoffice.list
 # Etcher (Converter em Deb)
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
-echo "deb https://deb.etcher.io stable etcher" > /etc/apt/sources.list.d/etcher.list
+echo 'deb https://deb.etcher.io stable etcher' > /etc/apt/sources.list.d/etcher.list
 # Code (Converter em Deb)
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/;rm microsoft.gpg
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list
 # Chrome (Converter em Deb)
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+wget -qO- https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google-chrome.list
 # Vivald (Converter em Deb)
-wget -O - http://repo.vivaldi.com/stable/linux_signing_key.pub | apt-key add -
-echo "deb http://repo.vivaldi.com/stable/deb/ stable main" > /etc/apt/sources.list.d/vivaldi.list
+wget -qO- http://repo.vivaldi.com/stable/linux_signing_key.pub | apt-key add -
+echo 'deb http://repo.vivaldi.com/stable/deb/ stable main' > /etc/apt/sources.list.d/vivaldi.list
 # Opera (Converter em Deb)
 wget -qO- https://deb.opera.com/archive.key | apt-key add -
 echo 'deb https://deb.opera.com/opera-stable/ stable non-free' > /etc/apt/sources.list.d/opera.list
 # Brave (Converter em Deb)
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | apt-key add -
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main" > /etc/apt/sources.list.d/brave-browser-release-`lsb_release -sc`.list
+echo 'deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main' > /etc/apt/sources.list.d/brave-browser-release-`lsb_release -sc`.list
 # Compiz Reloaded (Converter em Deb)
-echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/xUbuntu_17.10/ /' > /etc/apt/sources.list.d/compiz-reloaded.list
 wget -qO- http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/Debian_Testing/Release.key | apt-key add -
+echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser:/compiz-reloaded-rebuilds/xUbuntu_17.10/ /' > /etc/apt/sources.list.d/compiz-reloaded.list
 # Sublime Text (Converter em Deb)
-wget -c -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
-echo "deb https://download.sublimetext.com/ apt/stable/" > /etc/apt/sources.list.d/sublime-text.list
+wget -qO- https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
+echo 'deb https://download.sublimetext.com/ apt/stable/' > /etc/apt/sources.list.d/sublime-text.list
 # TimeShift (Converter em Deb)
 add-apt-repository -y ppa:teejee2008/ppa
 # NVIDIA (Converter em Deb)
