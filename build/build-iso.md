@@ -2,7 +2,7 @@
 ```bash
 #wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 #cp -v xubuntu*.iso livecdtmp
-cp -v /home/rauldipeas/xubuntu-18.10-core-amd64.iso livecdtmp/
+cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISO/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
 cd livecdtmp
 #sudo apt install -y debootstrap
 #mkdir edit
@@ -110,5 +110,5 @@ md5sum ../iso/radix-core-amd64.iso | sudo tee ../iso/radix-core-amd64.md5
 sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 xorriso
 sudo umount ../mnt
 wget -O- https://radix.ws/iso/upload-iso.sh | bash
-sudo rm -rfv /var/lib/buildkite-agent/builds/Servidor-1/radix/radix-build-iso/livecdtmp
+sudo rm -rfv /var/lib/buildkite-agent/builds/IdeaPad-320-1/radix/radix-build-iso/livecdtmp
 ```
