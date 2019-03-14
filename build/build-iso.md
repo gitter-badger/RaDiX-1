@@ -2,7 +2,7 @@
 ```bash
 #wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 #cp -v xubuntu*.iso livecdtmp
-cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
+sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
 cd livecdtmp
 #sudo apt install -y debootstrap
 #mkdir edit
