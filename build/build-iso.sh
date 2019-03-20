@@ -2,16 +2,12 @@
 
 #wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 #cp -v xubuntu*.iso livecdtmp
-#sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
+sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
 cd livecdtmp
-sudo apt install -y debootstrap
-mkdir edit
-sudo debootstrap --arch=amd64 cosmic edit
-sudo apt autoremove --purge -y debootstrap
-#sudo mount -o loop xubuntu*.iso mnt
-#sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
-#sudo unsquashfs mnt/casper/filesystem.squashfs
-#sudo mv squashfs-root edit
+sudo mount -o loop xubuntu*.iso mnt
+sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
+sudo unsquashfs mnt/casper/filesystem.squashfs
+sudo mv squashfs-root edit
 
 # Montagem do ambiente chroot
 
@@ -35,7 +31,7 @@ sudo chroot edit chsh -s /usr/bin/fish root
 sudo chroot edit wget -O oh-my-fish.sh https://get.oh-my.fish
 sudo chroot edit su -c "fish oh-my-fish.sh --noninteractive"
 sudo chroot edit su -c "fish -c 'omf install bobthefish'"
-sudo chroot edit DEBIAN_FRONTEND=noninteractive apt install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" linux-generic
+#sudo chroot edit DEBIAN_FRONTEND=noninteractive apt install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" linux-generic
 sudo chroot edit update-initramfs -u -k all
 sudo chroot edit sed -i -e 's@user-uid [0-9]*@user-uid 990@' /usr/share/initramfs-tools/scripts/casper-bottom/25adduser
 
@@ -107,7 +103,7 @@ sudo xorriso \
 -isohybrid-gpt-basdat \
 -o "../iso/radix-core-amd64.iso" .
 md5sum ../iso/radix-core-amd64.iso | sudo tee ../iso/radix-core-amd64.md5
-sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 #xorriso
+#sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 xorriso
 sudo umount ../mnt
 rm -rfv ../iso/.empty
 wget -O- https://radix.ws/iso/upload-iso.sh | bash
