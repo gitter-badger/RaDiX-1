@@ -2,16 +2,16 @@
 ```bash
 #wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
 #cp -v xubuntu*.iso livecdtmp
-sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
+#sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
 cd livecdtmp
-#sudo apt install -y debootstrap
-#mkdir edit
-#sudo debootstrap --arch=amd64 cosmic edit
-#sudo apt autoremove --purge -y debootstrap
-sudo mount -o loop xubuntu*.iso mnt
-sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
-sudo unsquashfs mnt/casper/filesystem.squashfs
-sudo mv squashfs-root edit
+sudo apt install -y debootstrap
+mkdir edit
+sudo debootstrap --arch=amd64 cosmic edit
+sudo apt autoremove --purge -y debootstrap
+#sudo mount -o loop xubuntu*.iso mnt
+#sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
+#sudo unsquashfs mnt/casper/filesystem.squashfs
+#sudo mv squashfs-root edit
 ```
 ### Montagem do ambiente chroot
 ```bash
@@ -107,7 +107,7 @@ sudo xorriso \
 -isohybrid-gpt-basdat \
 -o "../iso/radix-core-amd64.iso" .
 md5sum ../iso/radix-core-amd64.iso | sudo tee ../iso/radix-core-amd64.md5
-sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 xorriso
+sudo apt autoremove --purge -y isolinux syslinux-common libburn4 libisoburn1 libisofs6 libjte1 #xorriso
 sudo umount ../mnt
 rm -rfv ../iso/.empty
 wget -O- https://radix.ws/iso/upload-iso.sh | bash
