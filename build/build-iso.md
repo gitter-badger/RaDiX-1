@@ -1,8 +1,10 @@
 ### Preparação de arquivos e pastas
 ```bash
 #wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
+#wget -c https://unit193.net/xubuntu/core/pending/xubuntu-19.04-core-amd64.iso
 #cp -v xubuntu*.iso livecdtmp
-sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
+#sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
+sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-19.04-core-amd64.iso livecdtmp/
 cd livecdtmp
 sudo mount -o loop xubuntu*.iso mnt
 sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
@@ -70,7 +72,7 @@ sudo mkdir -pv extract-cd/.disk
 cd extract-cd/.disk
 sudo touch base_installable
 echo "full_cd/single" | sudo tee cd_type
-echo "RaDiX - Core - 27.01.2019" | sudo tee info
+echo "RaDiX - Core - 20.03.2019" | sudo tee info
 echo "RaDiX - Core" | sudo tee release_notes_url
 cd ../..
 ```

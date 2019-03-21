@@ -24,7 +24,8 @@ wget -qO- http://deb.playonlinux.com/public.gpg | apt-key add -
 wget http://deb.playonlinux.com/playonlinux_cosmic.list -O /etc/apt/sources.list.d/playonlinux.list
 # VirtualBox (Converter em Deb)
 wget -qO- https://www.virtualbox.org/download/oracle_vbox_2016.asc | apt-key add -
-echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian `lsb_release -s -c` contrib" > /etc/apt/sources.list.d/oracle-virtualbox.list
+#echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian `lsb_release -s -c` contrib" > /etc/apt/sources.list.d/oracle-virtualbox.list
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian cosmic contrib" > /etc/apt/sources.list.d/oracle-virtualbox.list
 # Skype (Converter em Deb)
 wget -qO- https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add -
 echo 'deb https://repo.skype.com/deb stable main' > /etc/apt/sources.list.d/skype-stable.list
@@ -67,12 +68,16 @@ add-apt-repository -y ppa:graphics-drivers/ppa
 add-apt-repository -y ppa:damentz/liquorix
 # Materia (Converter em Deb)
 add-apt-repository -y ppa:dyatlov-igor/materia-theme
+sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*materia*;sudo apt update
 # Y PPA Manager (Converter em Deb)
 add-apt-repository -y ppa:webupd8team/y-ppa-manager
 # Papirus (Dev) (Converter em Deb)
 add-apt-repository -y ppa:papirus/papirus-dev
+add-apt-repository -y ppa:papirus/papirus
+sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*papirus*;sudo apt update
 # Hardcode-Tray (Converter em Deb)
 add-apt-repository -y ppa:andreas-angerer89/sni-qt-patched
+sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*sni-qt*;sudo apt update
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y\
  apport*\
