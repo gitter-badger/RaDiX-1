@@ -3,6 +3,18 @@
 echo 'deb https://radix.ws/core-repo cosmic main' > /etc/apt/sources.list.d/rauldipeas.list
 echo 'deb https://master.dl.sourceforge.net/project/radix-core/large-repo cosmic main' >> /etc/apt/sources.list.d/rauldipeas.list
 wget -qO- https://radix.ws/core-repo/rauldipeas.key | apt-key add -
+echo '
+Package: qt5-style-kvantum
+Pin: origin radix.ws
+Pin-Priority: 600
+
+Package: qt5-style-kvantum-l10n
+Pin: origin radix.ws
+Pin-Priority: 600
+
+Package: qt5-style-kvantum-themes
+Pin: origin radix.ws
+Pin-Priority: 600' > /etc/apt/preferences.d/kvantum-pin-600
 add-apt-repository universe;add-apt-repository multiverse;apt update
 apt install -y apt-transport-https build-essential curl gdebi-core libglibmm-2.4-1v5 ruby-dev software-properties-common
 # KXStudio
