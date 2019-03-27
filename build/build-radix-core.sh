@@ -132,7 +132,7 @@ apt autoremove --purge -y\
 apt install -y browser-selector compiz-reloaded materia-gtk-theme rauldipeas-repo
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
-# App Grid
+## App Grid
 #sed -i 's/Exec=\/usr\/share\/appgrid\/appgrid.py %u/Exec=sh -c "env GTK_THEME=Arc \/usr\/share\/appgrid\/appgrid.py %u"/g' /usr/share/applications/appgrid.desktop
 # LightDM
 echo '[SeatDefaults]
