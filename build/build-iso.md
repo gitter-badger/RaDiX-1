@@ -1,10 +1,10 @@
 ### Preparação de arquivos e pastas
 ```bash
 #wget -c https://unit193.net/xubuntu/core/xubuntu-18.10-core-amd64.iso
-#wget -c https://unit193.net/xubuntu/core/pending/xubuntu-19.04-core-amd64.iso
-#cp -v xubuntu*.iso livecdtmp
+wget -c https://unit193.net/xubuntu/core/pending/xubuntu-19.04-core-amd64.iso
+cp -v xubuntu*.iso livecdtmp
 #sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-18.10-core-amd64.iso livecdtmp/
-sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-19.04-core-amd64.iso livecdtmp/
+#sudo cp -v /media/rauldipeas/Dados/rauldipeas/Downloads/ISOs/Linux/xubuntu-19.04-core-amd64.iso livecdtmp/
 cd livecdtmp
 sudo mount -o loop xubuntu*.iso mnt
 sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
