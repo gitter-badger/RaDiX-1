@@ -87,16 +87,16 @@ add-apt-repository -y ppa:graphics-drivers/ppa
 # Liquorix (Converter em Deb)
 add-apt-repository -y ppa:damentz/liquorix
 # Materia (Converter em Deb)
-add-apt-repository -y ppa:dyatlov-igor/materia-theme
+add-apt-repository -y -n ppa:dyatlov-igor/materia-theme
 sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*materia*;sudo apt update
 # Y PPA Manager (Converter em Deb)
 add-apt-repository -y ppa:webupd8team/y-ppa-manager
 # Papirus (Dev) (Converter em Deb)
-add-apt-repository -y ppa:papirus/papirus-dev
-add-apt-repository -y ppa:papirus/papirus
+add-apt-repository -y -n ppa:papirus/papirus-dev
+add-apt-repository -y -n ppa:papirus/papirus
 sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*papirus*;sudo apt update
 # Hardcode-Tray (Converter em Deb)
-add-apt-repository -y ppa:andreas-angerer89/sni-qt-patched
+add-apt-repository -y -n ppa:andreas-angerer89/sni-qt-patched
 sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*sni-qt*;sudo apt update
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y\
@@ -133,6 +133,7 @@ apt install -y browser-selector compiz-reloaded materia-gtk-theme rauldipeas-rep
 apt install -y --no-install-recommends ubuntu-software
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
+dpkg -l | grep -E linux-image-.*-generic | cut -d ' ' -f3 | grep -v `dpkg -l | grep -E linux-image-.*-generic | cut -d ' ' -f3 | tail -1` | grep -v `uname -r` | xargs apt autoremove --purge -y
 ## App Grid
 #sed -i 's/Exec=\/usr\/share\/appgrid\/appgrid.py %u/Exec=sh -c "env GTK_THEME=Arc \/usr\/share\/appgrid\/appgrid.py %u"/g' /usr/share/applications/appgrid.desktop
 # LightDM
