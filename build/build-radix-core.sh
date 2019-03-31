@@ -129,7 +129,7 @@ apt autoremove --purge -y\
  xubuntu*\
  yelp*
 # Instalação do repositório e das customizações do RaDiX
-apt install -y browser-selector compiz-reloaded materia-gtk-theme rauldipeas-repo 
+apt install -y browser-selector compiz-reloaded materia-gtk-theme rauldipeas-repo y-ppa-manager
 apt install -y --no-install-recommends ubuntu-software
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y build-essential fonts-lato meterbridge ruby-dev yelp* libyelp* xfdashboard-plugins
