@@ -98,6 +98,8 @@ sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*papirus*;sudo apt update
 # Hardcode-Tray (Converter em Deb)
 add-apt-repository -y -n ppa:andreas-angerer89/sni-qt-patched
 sudo sed -i 's/disco/cosmic/g' /etc/apt/sources.list.d/*sni-qt*;sudo apt update
+# Android Studio (Converter em Deb)
+apt-add-repository -y ppa:maarten-fonville/android-studio
 # Remoção de pacotes desnecessários
 apt autoremove --purge -y\
  apport*\
